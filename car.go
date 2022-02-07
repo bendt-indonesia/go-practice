@@ -1,7 +1,22 @@
 package main
 
-type car struct {
+type Brand struct {
+	Id int
+	Name string
+	Origin string
+}
+
+type Car struct {
 	Id int `json:"id"`
 	Name string `json:"name"`
-	BrandName string `json:"brand_name"`
+	BrandId Brand
+}
+
+
+
+func (c Car) createCar() {
+	//1st approach
+	//newCar := Car{1,"March","Nissan"}
+	//or
+	//newCar := Car{Id:1,Name:"March",BrandName: "Nissan"}
 }
